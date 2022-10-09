@@ -185,6 +185,30 @@ song_size : mp3.filesizeF
 	} })
 })
 
+
+router.get('/downloader/cosvideo', async (req, res, next) => {
+	var url = req.query.url
+	var qulity = req.query.resalution
+	if (!url ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"}) 
+
+	let { ytv } = require('../lib/y2mate')
+	//let mp3 = await yta(url, '128kbps')
+	let mp4 = await ytv(url, qulity )
+	if (!mp4.title ) return res.json(loghandler.noturl)
+		res.json({
+			status: true,
+			creator: `${creator}`,
+			result: {
+				Title: mp4.title,
+				thumb : mp4.thumb,
+				filesize: mp4.filesizeF,
+				Idvideo: mp4.id,	
+				mp4: mp4.dl_link
+
+	} })
+})
+
+
 router.get('/dowloader/soundcloud', async (req, res, next) => {
 	var url = req.query.url
 	if (!url ) return res.json({ status : false, creator : `${creator}`, message : "[!] masukan parameter url"})   
