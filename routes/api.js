@@ -168,7 +168,11 @@ router.get('/dowloader/yt', async (req, res, next) => {
 
 	let { yta, ytv } = require('../lib/y2mate')
 	let mp3 = await yta(url, '128kbps')
-	let mp4 = await ytv(url, '360p')
+	let 2mp4 = await ytv(url, '144p')
+	let 3mp4 = await ytv(url, '240p')
+	let 4mp4 = await ytv(url, '360p')
+	let 5mp4 = await ytv(url, '480p')
+	let 6mp4 = await ytv(url, '720p')
 	if (!mp4.title ) return res.json(loghandler.noturl)
 		res.json({
 			status: true,
@@ -178,9 +182,21 @@ router.get('/dowloader/yt', async (req, res, next) => {
 				thumb : mp4.thumb,
 				filesize: mp4.filesizeF,
 				Idvideo: mp4.id,
+				song_size : mp3.filesizeF,
 				mp3: mp3.dl_link,
-				mp4: mp4.dl_link,
-song_size : mp3.filesizeF
+				2m144p4: 2mp4.dl_link,
+				2filesize: 2mp4.filesizeF,
+				3m240p4: 3mp4.dl_link,
+				3filesize: 3mp4.filesizeF,
+				4m360p4: 4mp4.dl_link,
+				4filesize: 4mp4.filesizeF,
+				5m480p4: 5mp4.dl_link,
+				5filesize: 5mp4.filesizeF,
+				6m720p4: 6mp4.dl_link,
+				6filesize: 6mp4.filesizeF
+				
+				
+        
 
 	} })
 })
