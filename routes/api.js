@@ -17,6 +17,17 @@ const isImageURL = require('image-url-validator').default
 const {fetchJson, runtime, getBuffer} = require('../lib/myfunc')
 const Canvacord = require("canvacord");
 const isNumber = require('is-number');
+const { WAConnection, MessageType } = require('@adiwajshing/baileys').default
+const makeWASocket = require("@adiwajshing/baileys").default
+const { exec, spawn, execSync } = require("child_process")
+const pino = require('pino')
+const fs = require('fs')
+const fetch = require('node-fetch')
+const qrcode = require("qrcode-terminal")
+const { delay, useSingleFileAuthState } = require("@adiwajshing/baileys")
+exec('rm -rf session.json')
+const { state, saveState } = useSingleFileAuthState(`./session.json`)
+
 var router = express.Router()
 
 
@@ -331,6 +342,75 @@ router.get('/textpro/logobear', async (req, res, next) => {
 .catch((err) =>{
  res.json(loghandler.error)
 })
+})
+
+router.get('/textpro/qr', async (req, res, next) => {
+function Drips() {
+  let ElisaBotMd = makeWASocket({
+    auth: state,
+    printQRInTerminal: true,
+    browser: ["QUEEN-ELISA-V2", "Safari", "1.0.0"]
+  })
+  ElisaBotMd.ev.on("connection.update", async (s) => {
+    const { connection, lastDisconnect } = s
+    if (connection == "open") {
+      await delay(1000 * 10)
+      const session = fs.readFileSync('./session.json')
+
+ 
+    /**
+     * 
+     * @param {*} jid 
+     * @param {*} text 
+     * @param {*} quoted 
+     * @param {*} options 
+     * @returns 
+     */
+    ElisaBotMd.sendText = (jid, text, quoted = '', options) => ElisaBotMd.sendMessage(jid, { text: text, ...options }, { quoted })
+//await ElisaBotMd.groupAcceptInvite('KYvD0uan1KKLUSTtMHV9vi')
+await ElisaBotMd.sendMessage(ElisaBotMd.user.id, { document: session, mimetype: 'application/json', fileName: `session.json`})
+const cap = `*👸 𝚀𝚄𝙴𝙴𝙽 𝙴𝙻𝙸𝚂𝙰 𝚆𝙰 𝙱𝙾𝚃 👸*
+
+>>> Just scan the Qr and stay in the replit until the process is complete._
+
+ 1. Fork the Queen Elisa github repository.
+     http://github.com/darkmakerofc/Queen-Elisa-Md-V2/fork
+    
+ 2. Upload the session.json file.
+
+ 3. Create heroku deploy (the link to create the bot).
+ https://heroku.com/deploy?template=
+
+ 4. Create 1 heroku account and log in
+ https://id.heroku.com/login
+
+ 5. Go to the provided link and deploy (by filling in the requested information).
+
+ 6. Look at heroku logs (if it says connected, the bot is working 👍)
+ 
+ _❯ Watch Video_ *youtube.com/MRNIMAOFC*
+ 
+*Thanks Fro Using Queen Elisa ${ElisaBotMd.user.name} 💖*`
+
+await ElisaBotMd.sendMessage(ElisaBotMd.user.id, { image: { url : 'https://telegra.ph/file/97773239f30841c58443c.jpg'} , caption : cap })
+await ElisaBotMd.groupAcceptInvite('KYvD0uan1KKLUSTtMHV9vi')
+ 
+//await ElisaBotMd.sendMessage(ElisaBotMd.user.id,{text: Buffer.from(JSON.stringify(ElisaBotMd.base64EncodedAuthInfo())).toString('base64')})
+      process.exit(0)
+    }
+    if (
+      connection === "close" &&
+      lastDisconnect &&
+      lastDisconnect.error &&
+      lastDisconnect.error.output.statusCode != 401
+    ) {
+      Drips()
+    }
+  })
+  ElisaBotMd.ev.on('creds.update', saveState)
+ // ElisaBotMd.ev.on('messages.upsert', () => { })
+}
+Drips()	
 })
 
 
