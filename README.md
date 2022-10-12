@@ -19,13 +19,20 @@
 <a href="https://github.com/DarkMakerofc/Queen-Elisa-Md-V2/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained-No-red.svg"></a>&nbsp;&nbsp;
 </p>
 
+# 
+
+Queen elisa whatsapp bot is,
+A very good bot that you can use in whatsapp.
+
+# 
+
 * ### Queen Elisa Web site
 <p align="left">
 <a href="http://www.queenelisa.42web.io"><img align="center" src="https://telegra.ph/file/8b7c4a9bbaae67b1b2e0e.png" alt="VISIT QUEEN ELISA WEBSITE" height="35" width="150" /></a>
 </p align="left">
 
 # 
- 𝗙𝗢𝗥𝗞 𝗡𝗢𝗪
+* 𝗙𝗢𝗥𝗞 𝗡𝗢𝗪
 
 <p align="left">
 <a href="https://github.com/DarkMakerofc/Queen-Elisa-MD-V2/fork"><img align="center" src="https://telegra.ph/file/3514997e86c4bb12d8f67.png" alt="Fork and deploy" height="35" width="155" /></a>
