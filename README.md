@@ -26,7 +26,7 @@ A very good bot that you can use in whatsapp.
 
 # 
 
-* ### Queen Elisa Web site
+* 𝗤𝗨𝗘𝗘𝗡 𝗘𝗟𝗜𝗦𝗔 𝗪𝗘𝗕 𝗦𝗜𝗧𝗘
 <p align="left">
 <a href="http://www.queenelisa.42web.io"><img align="center" src="https://telegra.ph/file/8b7c4a9bbaae67b1b2e0e.png" alt="VISIT QUEEN ELISA WEBSITE" height="35" width="150" /></a>
 </p align="left">
@@ -37,7 +37,38 @@ A very good bot that you can use in whatsapp.
 <p align="left">
 <a href="https://github.com/DarkMakerofc/Queen-Elisa-MD-V2/fork"><img align="center" src="https://telegra.ph/file/3514997e86c4bb12d8f67.png" alt="Fork and deploy" height="35" width="155" /></a>
 
+# 
 
-### [`𝗦𝗖𝗔𝗡 𝗤𝗥 𝗖𝗢𝗗𝗘`](https://replit.com/@MRNima/QUEEN-ELISA-V2-MD-WHATSAPP-SCANER?v=1?outputonly=1&lite=1#index.js)
+* [`𝗦𝗖𝗔𝗡 𝗤𝗥 𝗖𝗢𝗗𝗘`](https://replit.com/@MRNima/QUEEN-ELISA-V2-MD-WHATSAPP-SCANER?v=1?outputonly=1&lite=1#index.js)
 
+# 
+
+* 𝗛𝗘𝗥𝗢𝗞𝗨 𝗧𝗘𝗠𝗣𝗟𝗔𝗧𝗘 𝗟𝗜𝗡𝗞
+       
+          https://heroku.com/deploy?template=
+
+
+## [`WATCH YOUTUBE VIDEO`](youtube.com/MRNIMAOFC)
+
+# 
+# 
+# 
+# 
++  DEPLOY STEPS
+# 
+1. Fork this repository 
+2. scan qr code
+3. uplode qr code your forked repo
+4. make deploy link
+5. deploy using your link 💖
+
+
+THANAKS FOR USNING QUEEN ELISA 💃💖
+
+
+[Join Public Group](https://chat.whatsapp.com/BbIpvkRD4qP6xKckb8cpT0)
+
+
+
+Thanks For - [tuna](github.com/zimbot) for script , [slrealtech]() , [darkalpha]() , [sanuwa]() and [isuru]() thanks for helps 💖
 
